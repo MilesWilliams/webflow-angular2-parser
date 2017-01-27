@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Fri Jan 27 2017 10:25:56 GMT+0000 (UTC)  -->
+<html data-wf-page="5884b844d9fbf8e65de047f2" data-wf-site="587d16ebaac75e1669502a7e">
+<head>
+  <meta charset="utf-8">
+  <title>Step 1</title>
+  <meta content="Step 1" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/td-phoenix.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Source Sans Pro:200,200italic,300,regular,600,700,900"]
+      }
+    });
+  </script>
+  <script src="../js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://dl.dropboxusercontent.com/u/5555505/webflow/td/css/td.css">
+  <style>
+    .col-xs > div {
+      	background: #A67FCF;
+        padding: 1rem;
+      }
+  </style>
+</head>
+<body>
+  <div class="preloader-wrapper w-embed" data-ix="hide-page-loader">
+    <div class="preloader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="td-app w-clearfix wrap" data-ix="initial-opacity-0">
+    <div class="sidebar" component="booking-sidebar">
+      <div class="booking-sidebar" data-ix="initial-opacity-0">
+        <div class="w-form">
+          <form class="form" data-name="Email Form" data-redirect="/book/step-1" id="email-form" name="email-form" redirect="/book/step-1">
+            <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+              <div class="book-sidebar-tabs w-tab-menu">
+                <a class="book-sidebar-tab-link w--current w-inline-block w-tab-link" data-w-tab="Tab 1">
+                  <div>Edit Search</div>
+                </a>
+                <a class="book-sidebar-tab-link w-inline-block w-tab-link" data-w-tab="Tab 2">
+                  <div>Filter cars</div>
+                </a>
+              </div>
+              <div class="book-sidebar-tabs-content w-tab-content">
+                <div class="w--tab-active w-tab-pane" data-w-tab="Tab 1">
+                  <div>
+                    <div class="booking-form-column col">
+                      <select class="w-select" data-name="Field 6" id="field-6" name="field-6">
+                        <option value="">Pick-up Location</option>
+                        <option value="Cape Town Airport">Cape Town Airport</option>
+                        <option value="Second">Second Choice</option>
+                        <option value="Third">Third Choice</option>
+                      </select>
+                      <select class="booking-select w-select" data-ix="initial-hidden-and-opacity-0" data-name="Field 9" id="field-9" name="field-9">
+                        <option value="">Drop-off Location</option>
+                        <option value="Cape Town Airport">Cape Town Airport</option>
+                        <option value="Second">Second Choice</option>
+                        <option value="Third">Third Choice</option>
+                      </select>
+                      <div class="return-location row xl-middle xl-start" data-ix="ux-show-conditional-select"><img src="../images/toggle-icon.png" width="20">
+                        <p class="page-subtitle remember-preferences-toggle">Return to same location</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col xl-6">
+                        <div class="has-cover rental-date">
+                          <p class="rental-day-of-week">Thursday</p>
+                          <p class="rental-month">January</p>
+                          <p class="rental-day">23</p>
+                          <p class="rental-time">at 10:00 am</p>
+                          <div class="hover-cover" data-modal-trigger="pick-up-date"><img src="../images/edit-date-icon2x.png" width="36">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col xl-6">
+                        <div class="has-cover rental-date">
+                          <p class="rental-day-of-week">Wednesday</p>
+                          <p class="rental-month">January</p>
+                          <p class="rental-day">29</p>
+                          <p class="rental-time">at 10:00 am</p>
+                          <div class="hover-cover" data-modal-trigger="drop-off-date"><img src="../images/edit-date-icon2x.png" width="36">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="field-7">Account</label>
+                    <select class="w-select" data-name="Field 7" id="field-7" name="field-7">
+                      <option value="">5 Star Car Hire</option>
+                      <option value="">Southern Offroad (Referral)</option>
+                      <option value="Second">Second Choice</option>
+                      <option value="Third">Third Choice</option>
+                    </select>
+                    <label for="field-8">Rate Sheet</label>
+                    <select class="w-select" data-name="Field 8" id="field-8" name="field-8">
+                      <option value="">Select Rate Sheet</option>
+                      <option value="">ITO - Special</option>
+                      <option value="">ITO - Tour Operator</option>
+                    </select>
+                    <label for="kilometres">Mileage</label>
+                    <select class="w-select" data-name="kilometres" id="kilometres" name="kilometres">
+                      <option value="Another Choice">Select Mileage</option>
+                      <option value="Unlimited Kilometers">Unlimited Kilometers</option>
+                    </select>
+                    <div class="row xl-middle xl-start"><img src="../images/toggle-icon.png" width="20">
+                      <p class="page-subtitle remember-preferences-toggle">Blue Club Reservation?</p>
+                    </div>
+                    <div class="row xl-middle xl-start"><img src="../images/toggle-icon.png" width="20">
+                      <p class="page-subtitle remember-preferences-toggle">Add Super Cover?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-tab-pane" data-w-tab="Tab 2">
+                  <div class="inner">
+                    <label for="field-10">Car Category</label>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 5" id="checkbox-5" name="checkbox-5" type="checkbox">
+                      <label class="w-form-label" for="checkbox-5">Your Favorites</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 9" id="checkbox-9" name="checkbox-9" type="checkbox">
+                      <label class="w-form-label" for="checkbox-9">Cars</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 6" id="checkbox-6" name="checkbox-6" type="checkbox">
+                      <label class="w-form-label" for="checkbox-6">Trucks &amp; Bakkies</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 8" id="checkbox-8" name="checkbox-8" type="checkbox">
+                      <label class="w-form-label" for="checkbox-8">SUVs &amp; Minivans</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 7" id="checkbox-7" name="checkbox-7" type="checkbox">
+                      <label class="w-form-label" for="checkbox-7">4x4</label>
+                    </div>
+                    <label for="field-10">Car Transmission</label>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox" id="checkbox" name="checkbox" type="checkbox">
+                      <label class="w-form-label" for="checkbox">Automatic</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 2" id="checkbox-2" name="checkbox-2" type="checkbox">
+                      <label class="w-form-label" for="checkbox-2">Manual</label>
+                    </div>
+                    <label for="field-10">Fuel Type</label>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 4" id="checkbox-4" name="checkbox-4" type="checkbox">
+                      <label class="w-form-label" for="checkbox-4">Petrol</label>
+                    </div>
+                    <div class="w-checkbox">
+                      <input class="w-checkbox-input" data-name="Checkbox 3" id="checkbox-3" name="checkbox-3" type="checkbox">
+                      <label class="w-form-label" for="checkbox-3">Diesel</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="toolbar-content" component="toolbar">
+        <div class="row">
+          <div class="sidebar-toggle toolbar-item" data-ix="collapse-sidebar"><img height="56" src="../images/icon-nav-toggle.png" width="56">
+          </div>
+        </div>
+        <div class="row">
+          <div class="toolbar-dropdown w-dropdown" data-delay="0">
+            <div class="toolbar-dropdown-toggle toolbar-item w-dropdown-toggle">
+              <div class="toolbar-dropdown-icon w-icon-dropdown-toggle"></div><img src="../images/icon-help.png" width="56">
+            </div>
+            <nav class="toolbar-dropdown-list w-dropdown-list">
+              <h1 class="toolbar-dropdown-list-name">Notifications</h1><a class="toolbar-dropdown-link w-dropdown-link" href="#">Link 1</a><a class="toolbar-dropdown-link w-dropdown-link" href="#">Link 2</a><a class="toolbar-dropdown-link w-dropdown-link" href="#">Link 3</a>
+            </nav>
+          </div>
+          <div class="toolbar-dropdown w-dropdown" data-delay="0">
+            <div class="toolbar-dropdown-toggle toolbar-item w-dropdown-toggle">
+              <div class="toolbar-dropdown-icon w-icon-dropdown-toggle"></div><img src="../images/icon-settings.png" width="56">
+            </div>
+            <nav class="toolbar-dropdown-list w-dropdown-list">
+              <h1 class="toolbar-dropdown-list-name">Notifications</h1><a class="w-dropdown-link" href="#">Link 1</a><a class="w-dropdown-link" href="#">Link 2</a><a class="w-dropdown-link" href="#">Link 3</a>
+            </nav>
+          </div>
+          <div class="toolbar-dropdown w-dropdown" data-delay="0">
+            <div class="toolbar-dropdown-toggle toolbar-item w-dropdown-toggle"><img class="toolbar-user-avatar" src="../images/avatar.jpg" width="36">
+              <div>
+                <div class="medium toolbar-dropdown-text">Bertus Floor</div>
+                <div class="toolbar-dropdown-icon w-icon-dropdown-toggle"></div>
+                <div class="small toolbar-dropdown-text">Admin - Klarity Hero</div>
+              </div>
+            </div>
+            <nav class="toolbar-dropdown-list w-dropdown-list">
+              <h1 class="toolbar-dropdown-list-name">Your Profile</h1><a class="toolbar-dropdown-link w-dropdown-link" href="#">Edit your profile</a><a class="toolbar-dropdown-link w-dropdown-link" href="#">Dashboard</a><a class="toolbar-dropdown-link w-dropdown-link" href="#">Settings</a><a class="toolbar-dropdown-link w-dropdown-link" href="#">Request Help</a><a class="last toolbar-dropdown-link w-dropdown-link" href="#">Logout</a>
+            </nav>
+          </div>
+          <div class="last toolbar-item" data-ix="collapse-sidebar"><img src="../images/icon-favorites.png" width="56">
+          </div>
+        </div>
+      </div>
+      <main app="td-app" class="app-content-wrapper">
+        <div class="search-results-container" component="page-vehicle-results">
+          <p class="search-results-count-info">Found <strong>16</strong> cars priced&nbsp;<strong>from R145.90 per day</strong>
+          </p>
+          <ul class="booking-steps-list w-list-unstyled">
+            <li class="active-booking-step">
+              <a class="active booking-step-description w-inline-block" href="#">
+                <div><strong>STEP 1:</strong> Select a vehicle</div>
+              </a>
+            </li>
+            <li class="booking-step">
+              <a class="booking-step-description w-inline-block" href="#">
+                <div><strong>STEP 2:</strong> ADD A DRIVER</div>
+              </a>
+            </li>
+            <li class="booking-step">
+              <a class="booking-step-description w-inline-block" href="#">
+                <div><strong>STEP 3:</strong> CONFIRM &amp; BOOK</div>
+              </a>
+            </li>
+          </ul>
+          <div class="app-inner" component="search-results">
+            <div class="search-results-inline-filter"><a class="active button button-sm group-first w-button" href="#">Recommended</a><a class="button button-sm w-button" href="#">Popular</a><a class="button button-sm group-last w-button" href="#">Lowest Price</a>
+            </div>
+            <div class="row" data-ix="show-booking-sidebar-on-loading-booking-page">
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+              <article class="col md-12 xl-6">
+                <div class="panel search-results-item">
+                  <article>
+                    <header class="panel-inner">
+                      <h1 class="h5">Mercedes C Class</h1>
+                      <p class="search-results-car-similar">Or similar vehicle</p>
+                      <p class="search-results-pricepd">R189
+                        <br><span class="search-results-per-day">per day</span>
+                      </p>
+                    </header>
+                    <div class="panel-inner">
+                      <p class="search-results-price">Group P</p><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 30vw" src="../images/Mercedes-Benz-ML350.png" srcset="../images/Mercedes-Benz-ML350-p-500x204.png 500w, ../images/Mercedes-Benz-ML350.png 640w"><img class="search-results-vehicle-specs-icons" sizes="(max-width: 479px) 100vw, (max-width: 767px) 59vw, (max-width: 991px) 62vw, 35vw" src="../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png" srcset="../images/Screen-Shot-2017-01-25-at-1.31.29-AM-p-500x82.png 500w, ../images/Screen-Shot-2017-01-25-at-1.31.29-AM.png 562w" width="281">
+                      <div class="row xl-middle"><a class="booking-form-button button w-button" href="#">Reserve</a>
+                        <p class="search-results-price-summary">For only R189 per day</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="search-results-inclusive-terms">
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info" data-ix="show-tooltip">What's included?</p>
+                          <div class="included-tooltip tooltip">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse.</p>
+                          </div>
+                        </div>
+                        <div class="search-results-inclusive-item">
+                          <p class="search-results-inclusive-info">What's excluded?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="fullscreen-modal-wrapper">
+      <div class="preloader-wrapper w-embed">
+        <div class="preloader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div><img class="fullscreen-modal-close" src="../images/noun_cross_569818.png" width="26">
+      <div class="fullscreen-modal modal-drop-off-date" data-modal="drop-off-date"><img class="fullscreen-modal-close" src="../images/noun_cross_569818.png" width="35">
+        <div class="preloader-wrapper w-embed">
+          <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="fullscreen-modal-content">
+          <header class="section-header">
+            <h1 class="h2 page-title">Select a <strong>drop off</strong> date &amp; time</h1>
+          </header>
+          <div class="to-date" data-language="en"></div><a class="button w-button" href="#">Save Date &amp; Time</a>
+        </div>
+      </div>
+      <div class="fullscreen-modal"></div>
+      <div class="fullscreen-modal modal-pick-up-date" data-modal="pick-up-date"><img class="fullscreen-modal-close" src="../images/noun_cross_569818.png" width="35">
+        <div class="preloader-wrapper w-embed">
+          <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="fullscreen-modal-content">
+          <header class="section-header">
+            <h1 class="h2 page-title">Select a <strong>pick up</strong> date &amp; time</h1>
+          </header>
+          <div class="row xl-center xl-middle">
+            <p class="pickup-date-placeholder">First select a date below</p><a class="button small w-button" href="#">Save</a>
+          </div>
+          <div class="from-date" data-language="en"></div>
+        </div>
+      </div>
+      <div class="fullscreen-modal modal-onboarding">
+        <div class="fullscreen-modal-content">
+          <header class="section-header">
+            <p class="attention page-subtitle">Welcome to Thrifty Direct</p>
+            <h1 class="h2 page-title">What would you like to do?</h1>
+          </header>
+          <div class="row xl-around">
+            <a class="app-route button open-modal w-inline-block" data-modal="book" href="../book/search.html"><img src="../images/icon-book.png" width="58">
+              <div>Book a vehicle</div>
+            </a>
+            <a class="app-route button w-inline-block" href="../manage/all.html"><img src="../images/icon-manage.png" width="58">
+              <div>Manage Bookings</div>
+            </a>
+            <a class="app-route button w-inline-block" data-ix="close-intro" href="../dashboard.html"><img src="../images/icon-dashboard.png" width="58">
+              <div>View Dashboard</div>
+            </a>
+          </div>
+          <div class="remember-preferences row"><img src="../images/toggle-icon.png" width="24">
+            <p class="page-subtitle remember-preferences-toggle">Remember this preference next time I log in</p>
+          </div>
+        </div>
+        <div class="onboarding-slider-wrap">
+          <h1 class="onboarding-welcome">Welcome to your new account</h1>
+          <div class="onboarding-slider w-slider" data-animation="slide" data-duration="500" data-infinite="1">
+            <div class="w-slider-mask">
+              <div class="onboarding-slide w-slide">
+                <div class="row">
+                  <div class="col">
+                    <div class="inner">
+                      <h2 class="h5">1. Confirm your details</h2>
+                      <p>Please confirm your details below.</p>
+                      <div class="w-form">
+                        <form class="w-clearfix" data-name="Email Form 2" id="email-form-2" name="email-form-2">
+                          <label for="name">Your name:</label>
+                          <input class="w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Pieter Lourens" type="text">
+                          <label for="email">Email Address:</label>
+                          <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="pieter@weareawesome.com" required="required" type="email">
+                          <label for="078-231">Email Address:</label>
+                          <input class="w-input" data-name="078 231 3131" id="078-231" maxlength="256" name="078-231-3131" placeholder="pieter@weareawesome.com" type="text"><a class="booking-form-button button next-step w-button" href="#">Next Step</a>
+                        </form>
+                        <div class="w-form-done">
+                          <div>Thank you! Your submission has been received!</div>
+                        </div>
+                        <div class="w-form-fail">
+                          <div>Oops! Something went wrong while submitting the form</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <aside class="col onboarding-slider-sidebar xl-5">
+                    <div class="inner">
+                      <h2 class="h6">1..2..3..4</h2>
+                      <p><strong>Your account manager</strong>
+                      </p><img class="toolbar-user-avatar" src="../images/avatar.jpg" width="36">
+                      <p>Chris Spiers</p>
+                      <p class="small">Tel: 076 723 1721</p>
+                      <p class="small"><a href="#">chris@thrifty.co.za</a>
+                      </p><a class="button small w-button" href="#">Send Ticket</a>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+              <div class="w-slide">
+                <h2 class="h6">STEP 2</h2>
+              </div>
+              <div class="w-slide"></div>
+              <div class="w-slide">
+                <h2 class="h6">STEP 3</h2>
+              </div>
+            </div>
+            <div class="left onboarding-slide-arrow w-slider-arrow-left">
+              <div class="w-icon-slider-left"></div>
+            </div>
+            <div class="next onboarding-slide-arrow w-slider-arrow-right">
+              <div class="w-icon-slider-right"></div>
+            </div>
+            <div class="onboarding-slide-nav w-round w-slider-nav"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script type="text/javascript" src="https://dl.dropboxusercontent.com/u/5555505/webflow/td/js/min/td-min.js"></script>
+</body>
+</html>
