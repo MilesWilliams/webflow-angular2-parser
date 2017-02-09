@@ -56,7 +56,7 @@ def parse():
 
             os.system("cd ..")
 
-parse()
+# parse()
 
 def component_builder():
     """ The component builder function is the core function of this script.
@@ -124,15 +124,12 @@ def component_builder():
                     component = component.prettify()
 
                     new_file.write(str(component))
-                    # print(component)
 
                 else:
                     new_file = open("../Angular/app/Components/"+component_name+"/"+component_name
                                     +".component.html", "w")
 
                     new_file.write(str(component))
-                    # print(component)
-
 
 
     with open(html_files+"/dashboard.html", "r+") as new_html:
@@ -184,6 +181,8 @@ def component_builder():
             if elem.find('</head>') > -1:
                 insert_num = index_lines.index(elem)
 
+            index_html = BeautifulSoup(elem, "lxml")
+
 
         angular_lines = [
             '<link href="styles.css" rel="stylesheet">\n',
@@ -195,11 +194,22 @@ def component_builder():
         ]
 
         new_app = open('../Angular/index.html', 'w').close()
+
         index_lines[insert_num:1] = angular_lines
         for lines in index_lines:
+            index_html = BeautifulSoup(lines, "lxml")
+            index_href = index_html.find_all("script", {"src": True})
+            new_app = open('../Angular/index.html', 'a')
+            for line in index_href:
+                href = line["src"]
+                new_href = ''
+                if href.startswith('js'):
+                    new_href = '../Angular/app/_build/'+ href
+                    line["src"] = new_href
+                    new_app.write(str(line) +'\n')
+
             lines = lines.replace('&lt;', '<')
             lines = lines.replace('&gt;', '>')
-            new_app = open('../Angular/index.html', 'a')
             new_app.write(lines)
 
 component_builder()
@@ -290,8 +300,7 @@ def router_creator():
     all_files = os.listdir(html_files)
 
     function_start = "const AppRoutes: Routes = ["
-    function_end = """]\n \nexport const routing:
-                     ModuleWithProviders = RouterModule.forRoot(AppRoutes);"""
+    function_end = """]\n \nexport const routing: ModuleWithProviders = RouterModule.forRoot(AppRoutes);"""
 
     file_start = open('./Path/route.start.ts', 'w')
     file_start.write("")
@@ -314,6 +323,11 @@ def router_creator():
     path_content = open('./Path/path.content.ts', 'a')
     path_content.write("")
     path_content.close()
+    path_new = open('./Path/path.new.ts', 'w')
+    path_new.write("")
+    path_new.close()
+    path_new = open('./Path/path.new.ts', 'a')
+
     for files in all_files:
 
         with open(html_files+"/"+files, "r") as html_file:
@@ -335,7 +349,6 @@ def router_creator():
                 href = "".join(href)
 
                 ts_import = 'import { '+ component_name +' } from "./Components/'+component+'/'+component+'.component";\n',
-                ts_content = '   {\n       path:"' + href + '",\n       component:'+ component_name+'\n   },\n'
 
                 for imp in ts_import:
                     file_import = open('./Path/route.import.ts', 'a')
@@ -350,7 +363,6 @@ def router_creator():
                 flattened_list.append(component)
                 path_list.append(href)
 
-                print(path_list)
 
                 for i in flattened_list:
                     i = i.capitalize()
@@ -358,12 +370,14 @@ def router_creator():
                     file_content.write("\n")
 
                 for path in path_list:
-                    path_content.write(path)
-                    path_content.write("\n")
+
+                    if not path.startswith("/") and not path.startswith("#"):
+                        path_content.write(path)
+                        path_content.write("\n")
 
 
 
-# router_creator()
+router_creator()
 
 def path_creator():
     """ This function serves in creating the app.routes.ts file
@@ -377,10 +391,15 @@ def path_creator():
     file_path = open('./Path/path.content.ts', 'r')
     path_file = open('./Path/app.route.ts', "a")
 
-    with open('./Path/app.route.ts', "r+") as path_file:
+    if not os.path.exists('../Angular/app/app.routing.ts'):
+        os.system('touch ../Angular/app/app.routing.ts')
+
+    else:
+        pass
+
+    with open('../Angular/app/app.routing.ts', "r+") as path_file:
         path_file.truncate()
-        path_file.write("""import { ModuleWithProviders} from '@angular/core';\n
-                        import { Routes, RouterModule } from '@angular/router';\n""")
+        path_file.write("""import { ModuleWithProviders} from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\n""")
         imports = file_import.readlines()
         s = []
         for port in imports:
@@ -412,7 +431,6 @@ def path_creator():
                 if not href.startswith("/") and not href.startswith("#"):
                     path.append(href)
 
-        print(path)
 
         for contents in path_contents:
 
@@ -421,14 +439,16 @@ def path_creator():
 
         for line, h in zip(lines, path):
             h = h.strip("\n")
+            h = h.replace("dashboard", "/")
             line = line.split('-')
             line = "".join(line)
             line = line.strip("\n")
-            path_file.write("\n    {\n    path: '"+ h +"',\n    component:'"+ line +"'\n    },")
+            path_file.write("\n    {\n    path: '"+ h +"',\n    component:"+ line +"\n    },")
 
         function_end = file_end.read()
         path_file.write("\n"+function_end)
 
+path_creator()
 
 
 def router_link():
@@ -466,20 +486,37 @@ def router_link():
                             striped_url = striped_url.replace("/dashboard", "/")
                             tracker = "['"+striped_url +"']"
 
-                        print(lines)
                         route = '[routerLink]='+'"'+tracker+'"'
                         split_line = lines.split('href="'+h_url+'"')
                         split_line = route.join(split_line)
                         lines = lines.replace(str(h), split_line)
 
-                        print(split_line)
                         append_write.write(split_line)
 
                     else:
-                        print(lines)
                         append_write.write(lines)
 
 router_link()
+
+def index_cleaner():
+
+    with open('../Angular/index.html', 'r') as read_index:
+
+        index_soup = BeautifulSoup(read_index)
+        index_scripts = index_soup.findAll("script", {"src": True})
+        print(index_scripts)
+        for index in index_scripts:
+            if index["src"].startswith("js/"):
+                index.decompose()
+
+        new_file = open("../Angular/index.html", "w")
+        new_file.close()
+
+        new_file = open("../Angular/index.html", "a")
+        new_file.write(str(index_soup))
+
+index_cleaner()
+
 
 def directory_cleaner():
     """ This function cleans the angular app directory of all the files created
@@ -492,4 +529,4 @@ def directory_cleaner():
     os.remove('../Angular/index2.html')
     os.remove('../Angular/dashboard.html')
 
-# directory_cleaner()
+directory_cleaner()
